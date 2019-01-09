@@ -109,6 +109,9 @@ public class Starter extends BasicGame implements Observable {
         }
 
         System.out.println(SingletonMoveChange.getInstance().getChange());
+        if(SingletonMoveChange.getInstance().getChange() % 10 == 0){
+            this.informAll();
+        }
     }
 
     @Override
